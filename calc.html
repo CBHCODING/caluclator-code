@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Payroll Calculator</title>
+   
+</head>
+<body>
+    <section class="calc-holder">
+        <h2>Oaceus 360 Payroll Calculator</h2>
+        <label>Gross Pay Per Pay Period: $<input type="number" id="grossPay"></label><br>
+        <label>Number of Pay Periods Per Year:
+            <select id="payPeriods">
+                <option value="52">Weekly (52)</option>
+                <option value="26">Biweekly (26)</option>
+                <option value="24">Semimonthly (24)</option>
+                <option value="12">Monthly (12)</option>
+            </select>
+        </label><br>
+        <label>Tax Rate (%): <input type="number" id="taxRate" step="0.01" value="7.65"></label><br>
+        <label>Universal Life (UL) Insurance Premium Per Pay Period: $<input type="number" id="ulPremium"></label><br>
+        
+        <button onclick="calculatePaycheck()">Calculate</button>
+        
+        <h3>Results</h3>
+        <p>Employee Pre-Tax Contribution Per Pay Period: $<span id="preTaxPerPay">0.00</span></p>
+        <p>Tax Savings Per Pay Period: $<span id="taxSavings">0.00</span></p>
+        <p>Employer PHP Fee Per Pay Period: $<span id="phpFee">0.00</span></p>
+        <p>Adjusted Gross Pay After Pre-Tax Deduction: $<span id="adjustedGrossPay">0.00</span></p>
+        <p>Adjusted Pay After Taxes: $<span id="adjustedPayAfterTaxes">0.00</span></p>
+        <p>Final Paycheck After UL Deduction: $<span id="finalPaycheck">0.00</span></p>
+    </section>
+   
+    <script src="custom.js"></script>
+</body>
+</html>
